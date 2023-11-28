@@ -92,11 +92,15 @@ header {
 .logo {
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
     margin: 1rem 1rem;
 
+}
+
+.projectInfos-mobile {
+    display: block;
 }
 
 

@@ -84,6 +84,9 @@ p {
     position: fixed;
 }
 
+.projectInfos-mobile {
+    display: none;
+}
 
 
 /* hero */
