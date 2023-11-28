@@ -3,6 +3,17 @@
     src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -18,11 +29,29 @@ h3 {
     font-size: 1.8rem;
 }
 
+h1,
+h2,
+h3 {
+    font-family: var(--font-bold)
+}
+
+
+
+
+
+
+p {
+    font-family: Roboto-Light;
+}
+
 :root {
     --color01: white;
     --color02: #0B0C17;
     --color03: #FF3571;
     --color04: #DDDDDD;
+    --font-regular: Roboto;
+    --font-light: Roboto-Light;
+    --font-bold: Roboto-Bold;
 }
 
 .logo {
@@ -53,19 +82,30 @@ h3 {
 
 
 .challenge {
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
     border: 1px solid green;
     gap: 8rem;
+
 }
+
+.challengeHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40vw;
+    text-align: center;
+}
+
 
 
 main .challenge .article {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(49, 0, 128);
+    align-items: flex-start;
     padding: 0 8rem;
     gap: 2rem;
 }
@@ -73,6 +113,35 @@ main .challenge .article {
 main .challenge .article .articleImage {
     width: 40%;
 }
+
+main .challenge .articleInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .challenge .articleInfos .articleNumber {
+    color: var(--color04);
+    font-size: 3.25rem;
+    font-family: var(--font-bold);
+}
+
+
+
+main .challenge .articleInfos .articleTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: var(--font-bold);
+
+}
+
+
+main .challenge .articleInfos .articleContent {
+    font-size: 0.8rem;
+    text-decoration: solid;
+    line-height: 200%;
+}
+
 
 
 /* footer */
@@ -89,7 +158,6 @@ footer .subscribe {
 footer .subscribe p {
     text-align: center;
     font-size: 0.8rem;
-    font-weight: 300;
     line-height: 130%;
     padding-bottom: 3rem;
     width: 20%;
