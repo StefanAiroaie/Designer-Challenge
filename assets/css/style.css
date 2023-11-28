@@ -23,6 +23,7 @@
 html {
     font-family: Roboto;
     color: black;
+    scroll-behavior: smooth;
 }
 
 h3 {
@@ -33,16 +34,16 @@ h1 {
     font-size: 3.25rem;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 
 h1,
 h2,
 h3 {
     font-family: var(--font-bold)
 }
-
-
-
-
 
 
 p {
@@ -61,6 +62,24 @@ p {
 
 
 
+
+
+
+
+/* logo */
+.logo {
+    width: 50px;
+    margin: 2rem 2rem;
+    position: fixed;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+}
+
+
+/* hero */
+
 .hero {
     width: 100vw;
     height: 80vh;
@@ -70,7 +89,7 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 8rem;
-    border: 1px solid gray;
+
 }
 
 .heroContent {
@@ -114,7 +133,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
+    padding-right: 5rem;
 }
 
 .scroll {
@@ -126,18 +145,7 @@ p {
 
 
 
-
-.logo {
-    width: 50px;
-    margin: 2rem 2rem;
-    position: fixed;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-
-}
-
-
+/* section image projects */
 .pojects {
     width: 100vw;
     height: 70vh;
@@ -146,27 +154,89 @@ p {
 
 .pojects img {
     width: 100%;
-    border: 1px solid red;
-}
-
-.learnigsIcon {
-    width: 3%;
 }
 
 
 
-/* infos */
+
+/* infos section */
 
 .infos {
     display: flex;
     flex-direction: column;
+    width: 100vw;
 
+}
+
+.introInfos {
+    display: flex;
+    padding: 8rem;
+    gap: 10rem;
+}
+
+
+.introInfos h2 {
+    flex: 1;
+}
+
+.introInfos .icon {
+    width: 20%;
+}
+
+.introInfos p {
+    flex: 3;
+    padding-right: 10rem;
+    font-size: 18px;
+    line-height: 200%;
+}
+
+.learnigs-header {
+    margin-left: 10rem;
+    width: 40%;
 }
 
 .learnigs-table {
-    display: grid;
+    display: flex;
+    padding: 8rem;
+    flex-wrap: wrap;
 }
 
+.learnigs-table .learnings {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+.learnings:nth-of-type(1) {
+    flex: 2;
+}
+
+.learnings:nth-of-type(2) {
+    flex: 2;
+}
+
+.learnings:nth-of-type(3) {
+    flex: 3;
+}
+
+.learnings:nth-of-type(4) {
+    flex: 3;
+}
+
+
+.learningsInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+
+.learnigsIcon {
+    width: 30px;
+}
 
 
 
@@ -179,7 +249,6 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    border: 1px solid green;
     gap: 8rem;
 
 }
@@ -199,7 +268,7 @@ main .challenge .article {
     justify-content: center;
     align-items: flex-start;
     padding: 0 8rem;
-    gap: 2rem;
+    gap: 10rem;
 }
 
 main .challenge .article .articleImage {
