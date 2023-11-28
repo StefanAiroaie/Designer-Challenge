@@ -26,9 +26,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h3 {
-    font-size: 1.8rem;
-}
+
 
 h1 {
     font-size: 3.25rem;
@@ -38,16 +36,30 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+span {
+    font-size: 0.8rem;
+    line-height: 80%;
+}
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--font-bold)
 }
 
 
 p {
     font-family: var(--font-light);
+    line-height: 200%;
 }
 
 :root {
@@ -65,17 +77,13 @@ p {
 
 
 
-
 /* logo */
 .logo {
     width: 50px;
     margin: 2rem 2rem;
     position: fixed;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-
 }
+
 
 
 /* hero */
@@ -93,12 +101,12 @@ p {
 }
 
 .heroContent {
+    padding-top: 2.8rem;
     width: 100vw;
     height: 80vh;
     display: flex;
-    align-items: flex-end;
     gap: 3rem;
-    padding-bottom: 4rem;
+
 }
 
 .hero .heroContent .heroImage {
@@ -126,6 +134,10 @@ p {
 
 .icon {
     width: 5%;
+}
+
+.projectInfos {
+    padding-bottom: 9rem;
 }
 
 .heroInfos {
@@ -195,33 +207,42 @@ p {
     width: 40%;
 }
 
+
+
 .learnigs-table {
-    display: flex;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "first second"
+        "third fourt";
+    gap: 4rem;
     padding: 8rem;
-    flex-wrap: wrap;
 }
 
-.learnigs-table .learnings {
+.learnings {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
-
 .learnings:nth-of-type(1) {
-    flex: 2;
+    /* flex: 2; */
+    grid-area: first;
 }
 
 .learnings:nth-of-type(2) {
-    flex: 2;
+    /* flex: 2; */
+    grid-area: second;
 }
 
 .learnings:nth-of-type(3) {
-    flex: 3;
+    /* flex: 3; */
+    grid-area: third;
 }
 
 .learnings:nth-of-type(4) {
-    flex: 3;
+    /* flex: 3; */
+    grid-area: fourt;
 }
 
 
@@ -318,8 +339,6 @@ footer .subscribe {
 
 footer .subscribe p {
     text-align: center;
-    font-size: 0.8rem;
-    line-height: 130%;
     padding-bottom: 3rem;
     width: 20%;
 }
@@ -370,9 +389,6 @@ footer .subscribe form input[type="submit"]:hover {
 .copyright {
     margin-top: 9rem;
     margin-left: 9rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 150%
 }
 
 .copyright img {
