@@ -29,19 +29,19 @@ html {
 
 
 h1 {
-    font-size: 3.25rem;
-}
-
-h2 {
     font-size: 2rem;
 }
 
+h2 {
+    font-size: 1.5rem;
+}
+
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 span {
@@ -74,14 +74,29 @@ p {
 
 
 
+header {
+    width: 100vw;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
 
+}
+
+.logo img {
+    width: 50px;
+}
 
 
 /* logo */
 .logo {
-    width: 50px;
-    margin: 2rem 2rem;
-    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 1rem;
+
 }
 
 
@@ -90,69 +105,53 @@ p {
 
 .hero {
     width: 100vw;
-    height: 80vh;
-    margin-bottom: 4rem;
+    height: 90vh;
+    margin-bottom: 3rem;
     background-image: url("../img/ilustracion1.png");
     background-position: right top;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
 
 }
 
 .heroContent {
-    padding-top: 2.8rem;
+    padding-top: 1rem;
     width: 100vw;
-    height: 80vh;
     display: flex;
-    gap: 3rem;
-
+    flex-direction: column-reverse;
+    align-items: flex-end;
 }
 
 .hero .heroContent .heroImage {
-    width: 50%;
+    padding-top: 1rem;
+    width: 90%;
     animation: move 4s ease-in-out infinite;
 }
 
-@keyframes move {
-    0% {
-        transform: translateY(0);
-    }
-
-    33% {
-        transform: translateY(25px);
-    }
-
-    66% {
-        transform: translateY(-30);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .icon {
-    width: 5%;
+    width: 10%;
 }
 
 .projectInfos {
-    padding-bottom: 9rem;
+    padding-bottom: 1rem;
+    display: none;
 }
 
 .heroInfos {
-    padding-left: 8rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-right: 5rem;
+    padding-right: 2rem;
 }
 
 .scroll {
     color: var(--color03);
     font-size: 0.8;
     text-transform: uppercase;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 
@@ -160,14 +159,13 @@ p {
 /* section image projects */
 .pojects {
     width: 100vw;
-    height: 70vh;
-    margin-bottom: 8rem;
+    height: 20vh;
+    margin-bottom: 1rem;
 }
 
 .pojects img {
     width: 100%;
 }
-
 
 
 
@@ -177,18 +175,23 @@ p {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    align-items: center;
 
 }
 
 .introInfos {
     display: flex;
-    padding: 8rem;
-    gap: 10rem;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .introInfos h2 {
-    flex: 1;
+    /* flex: 1; */
+    text-align: center;
+    width: 60%;
 }
 
 .introInfos .icon {
@@ -197,26 +200,27 @@ p {
 
 .introInfos p {
     flex: 3;
-    padding-right: 10rem;
+    padding: 1rem;
     font-size: 18px;
     line-height: 200%;
 }
 
 .learnigs-header {
-    margin-left: 10rem;
-    width: 40%;
+    text-align: center;
+    margin: 1rem;
+    width: 80%;
 }
-
-
 
 .learnigs-table {
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "first second"
-        "third fourt";
-    gap: 4rem;
-    padding: 8rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "first"
+        "second"
+        "third"
+        "fourt";
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .learnings {
@@ -225,61 +229,30 @@ p {
     gap: 1rem;
 }
 
-.learnings:nth-of-type(1) {
-    /* flex: 2; */
-    grid-area: first;
-}
-
-.learnings:nth-of-type(2) {
-    /* flex: 2; */
-    grid-area: second;
-}
-
-.learnings:nth-of-type(3) {
-    /* flex: 3; */
-    grid-area: third;
-}
-
-.learnings:nth-of-type(4) {
-    /* flex: 3; */
-    grid-area: fourt;
-}
-
-
 .learningsInfos {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-
-
-
 .learnigsIcon {
-    width: 30px;
+    width: 40px;
 }
-
-
 
 /* challenge */
 
-
 .challenge {
-    margin-top: 8rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100vw;
-    gap: 8rem;
+    gap: 3rem;
 
 }
 
 .challengeHeader {
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
-    width: 40vw;
-    text-align: center;
+    width: 80vw;
 }
 
 
@@ -288,12 +261,17 @@ main .challenge .article {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 8rem;
-    gap: 10rem;
+    padding: 0 1rem;
+    gap: 1rem;
 }
 
 main .challenge .article .articleImage {
-    width: 40%;
+    width: 30%;
+}
+
+.articleIcon {
+    width: 10px;
+
 }
 
 main .challenge .articleInfos {
@@ -312,7 +290,6 @@ main .challenge .articleInfos .articleNumber {
 
 main .challenge .articleInfos .articleTitle {
     font-size: 1.2rem;
-    font-weight: 700;
     font-family: var(--font-bold);
 
 }
@@ -329,18 +306,13 @@ main .challenge .articleInfos .articleContent {
 /* footer */
 
 footer .subscribe {
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    margin-top: 4rem;
 }
 
 footer .subscribe p {
     text-align: center;
     padding-bottom: 3rem;
-    width: 20%;
+    width: 80%;
 }
 
 footer .subscribe form {
@@ -352,43 +324,17 @@ footer .subscribe form {
 
 
 footer .subscribe form input[type="email"] {
-    border: none;
-    width: 40vw;
-    height: 3rem;
-    border-radius: 8px;
-    border: 1px solid #F5F5F5;
-    background: #FFF;
-    box-shadow: 0px 15px 60px 0px rgba(12, 14, 31, 0.06);
-
-}
-
-
-footer .subscribe form input[type="email"]::placeholder {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #757575;
-    text-align: center;
-    font-family: Arial;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 3rem
-}
-
-footer .subscribe form input[type="submit"] {
-    background-color: var(--color03);
-    color: var(--color01);
-    padding: 0.8rem 3rem;
-    border: none;
-    border-radius: 0.2rem;
-}
-
-footer .subscribe form input[type="submit"]:hover {
-    background-image: linear-gradient(to right, #6b5de5 0%, #E55D87 100%);
+    width: 80vw;
 }
 
 
 .copyright {
-    margin-top: 9rem;
-    margin-left: 9rem;
+    margin-top: 2rem;
+    margin: 2rem;
+}
+
+.copyright p {
+    text-align: center;
 }
 
 .copyright img {
